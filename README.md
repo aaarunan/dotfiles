@@ -3,7 +3,7 @@
 ## Installation
 ```git clone --bare https://github.com/aaarunan/dotfiles.git $HOME/.dotfiles```
 
-```alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'```
+```alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotifiles/ --work-tree=$HOME'```
 
 ```dotfiles checkout```
 
