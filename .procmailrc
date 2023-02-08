@@ -1,0 +1,301 @@
+PATH=/usr/local/bin:/usr/bin:/bin
+MAILDIR=$HOME/Mail		# make sure it exists!
+DEFAULT=$MAILDIR/		# optional
+LOGFILE=$HOME/.procmail-log	# recommended
+VERBOSE=on
+
+LOG = "
+"
+
+# Update notmuch DB
+
+
+# Samfundet mailman lists
+
+:0
+* ^List-Post.*itk-intern@samfundet.no
+.itk-intern/
+
+:0
+* ^List-Post.*info@samfundet.no
+.samfundet-info/
+
+:0
+* ^List-Post.*diskusjon@samfundet.no
+.samfundet-diskusjon/
+
+:0
+* ^List-Post.*klostergt@samfundet.no
+.samfundet-klostergt/
+
+# Annet mailman
+
+:0
+* ^List-Id.*qwt-interest
+.qwt-interest/
+
+
+# Samfundet AMSIT lists
+
+:0
+* ^Delivered-To.*itk-debian@samfundet.no
+.itk-debian/
+
+:0
+* ^Subject.*Mail delivery failed.*
+.itk-bounces/
+
+:0
+* ^(To|Cc|From).*-owner@(samfundet|uka).no
+.mailman/
+
+:0
+* ^Delivered-To.*unix@samfundet.no
+.itk-unix/
+
+:0
+* ^Delivered-To.*itk-puppet@samfundet.no
+.itk-puppet/
+
+:0
+* ^Reply-To.*support-comment@uka.no
+.uka-support/
+
+:0
+* ^Delivered-To.*itk-handel@samfundet.no
+.itk-handel/
+
+:0
+* ^Delivered-To.*itk-oko@samfundet.no
+.itk-oko/
+
+:0
+* ^Delivered-To.*itk-commits-billig@samfundet.no
+.itk-billig-commits/
+
+:0
+* ^Delivered-To.*itk-billig@samfundet.no
+.itk-billig/
+
+:0
+* ^Delivered-To.*itk-billig-demo@samfundet.no
+.itk-billig/
+
+:0
+* ^Subject.*Unhandled error in paal Billig-dev
+.paal-billig-dev/
+
+:0
+* ^Delivered-To.*itk-mdb@samfundet.no
+.itk-mdb/
+
+:0
+* ^Delivered-To.*itk-ufs@samfundet.no
+.itk-ufs/
+
+:0
+* ^Delivered-To.*itk-cashflow@samfundet.no
+.itk-cashflow/
+
+:0
+* ^Delivered-To.*itk-bar@samfundet.no
+.itk-bar/
+
+:0
+* ^Delivered-To.*itk-sosialt@samfundet.no
+.itk-sosialt/
+
+:0
+* ^Delivered-To.*itk-itkwiki-rss@samfundet.no
+.itk-itkwiki-rss/
+
+:O
+* ^Delivered-To.*itk-commits@samfundet.no
+.itk-commits/
+
+:0
+* ^Delivered-To.*itk-opptak@samfundet.no
+.itk-opptak/
+
+:0
+* ^Delivered-To.*itk-twitter@samfundet.no
+.itk-twitter/
+
+:0
+* ^Delivered-To.*itk-leder@samfundet.no
+.itk-leder/
+
+### CHY HXN
+
+
+:0
+* ^(Envelope-To|Delivered-To|Cc|From|To).*uno-forum@uka.no
+.unoforum/
+
+:0
+* ^(Envelope-To|Delivered-To|Cc|From|To).*uno@uka.no
+.unoforum/
+
+:0
+* ^Delivered-To.*it-trac@uka.no
+.uka-it-trac/
+
+:0
+* ^To.*it-django@uka.no
+.uka-it-django/
+
+:0
+* ^To.*itk-(uno|unoapps)@samfundet.no
+.itk-uno/
+
+:0
+* ^(From|To).*devnull@uka.no
+.uka-devnull/
+
+:0
+* ^Subject.*\[UKA-alle\]
+.uka-alle/
+
+:0
+* ^To.*it-commits@uka.no
+.uka-it-commits/
+
+:0
+* ^To.*itk-commits-uno@samfundet.no
+.itk-commits-uno/
+
+:0
+* ^To.*itk-commits-itkadduser@samfundet.no
+.itk-commits-itkadduser/
+
+:0
+* ^To.*itk-commits-unoapps@samfundet.no
+.itk-commits-unoapps/
+
+:0
+* ^Delivered-To.*it-drift@uka.no
+.uka-it-drift/
+
+:0
+* ^(Delivered-To|To).*it-utvikling@uka.no
+.uka-utvikling/
+
+:0
+* ^(From|To).*froydis
+.uka-utviklingsleder/
+
+:0
+* ^(To|Cc|From).*utviklingsleder@uka.no
+.uka-utviklingsleder/
+
+:0
+* ^Delivered-To.*admin-alle@uka.no
+.admin-alle/
+
+:0
+* ^To.*admin-alle@uka.no
+.admin-alle/
+
+:0
+* ^Subject.*\[Uka-admin-alle\]
+.admin-alle/
+
+:0
+* ^Delivered-To.*billett-support@uka.no
+.uka-billett-support/
+
+:0
+* ^Delivered-To.*itsjef@uka.no
+.it-sjef/
+
+:0
+* ^Delivered-To.*it-sjef@uka.no
+.it-sjef/
+
+### RT
+# Denne ligger til slutt fordi om en mail går fra RT til de andre listene her
+# så tar denne regelen begge
+
+:0
+* ^Reply-To.*itk-comment@samfundet.no
+.itk/
+
+:0
+* ^Reply-To.*rekrutteringen-comment@uka.no
+.rekrutteringen/
+
+:0
+* ^Reply-To.*pakketilbud-comment@uka.no
+.pakketilbud/
+
+:0
+* ^Reply-To.*opptak-comment@uka.no
+.uka-opptak/
+
+:0
+* ^Reply-To.*logistikk-comment@uka.no
+.uka-logistikk/
+
+:0
+* ^Reply-To.*forhandsbestilling.*
+.pakketilbud-test/
+
+### gmail
+
+## Stud
+# Mail fra stud, herunder mail som studass etc.
+
+
+### Custom
+
+:0
+* ^(To|Cc|From).*debian-security@(lists\.)?debian\.org
+.debian-security/
+
+:0
+* ^(To|Cc|From).*debian-security-announce@(lists\.)?debian\.org
+.debian-security-announce/
+
+:0
+* ^(To|Cc|From).*debian-user@(lists\.)?debian\.org
+.debian-user/
+
+:0
+* ^(To|Cc|From).*freeradius-users@(lists\.)?freeradius\.org
+.freeradius-user/
+
+:0
+* ^(To|Cc|From).*itk-huskesys@samfundet.no
+.huskesys/
+
+:0
+* ^(To|Cc|From).*rt-test@samfundet.no
+.rt-test/
+
+:0
+* ^(To|Cc|From).*socibusters@samfundet\.no
+.socibusters/
+
+:0
+* ^Subject.*Ticket not taken.*
+.trash/
+
+:0
+* ^(To|Cc|From).*dankmemez@uka.no
+.dank/
+
+:0
+* ^(To|Cc|From).*itk-handel@samfundet.no
+.itk-handel/
+
+:0
+* ^(To|Cc|From).*itk-opptak@samfundet.no
+.itk-opptak/
+
+### Default
+
+:0
+*
+$DEFAULT
+
+
