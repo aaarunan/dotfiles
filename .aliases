@@ -2,7 +2,7 @@
 
 servers=("cass" "cirkus" "navi")
 
-for server in servers 
+for server in "${servers[@]}"
 do
     alias $server="mosh $server"
 done
