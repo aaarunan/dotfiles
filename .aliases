@@ -4,7 +4,7 @@ servers=("cass" "cirkus" "navi")
 
 for server in servers 
 do
-    alias $server="mosh $server";
+    alias $server="mosh $server"
 done
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
