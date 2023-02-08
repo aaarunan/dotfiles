@@ -1,0 +1,5 @@
+server https://rt.samfundet.no
+user arunang
+query Status!='resolved' and Status!='rejected' and owner='arunang'
+queue itk
+auth gssapi
