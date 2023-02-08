@@ -99,7 +99,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"R
 
-alias cass="mosh cass"
-alias dotfiles='/usr/bin/git --git-dir=/home/arunang/.cfg/ --work-tree=/home/arunang'
 source .aliases
 source .local-aliases
