@@ -6,5 +6,6 @@ for server in servers
 do
     alias $server="mosh $server";
 done
-alias dotfiles='/usr/bin/git --git-dir=/home/arunang/.cfg/ --work-tree=/home/arunang'
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
