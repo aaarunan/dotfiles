@@ -1,0 +1,10 @@
+#!/bin/bash
+
+servers=("cass" "cirkus" "navi")
+
+for server in servers 
+do
+    alias $server="mosh $server";
+done
+alias dotfiles='/usr/bin/git --git-dir=/home/arunang/.cfg/ --work-tree=/home/arunang'
+
