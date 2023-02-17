@@ -12,4 +12,6 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias reload-apache='systemctl reload apache2.service'
 alias reload-bind='systemctl reload bind9.service'
 
+alias etc-apache='vim /etc/apache2/sites-available/$1'
+alias etc-uwsgi='vim /etc/uwsgi/apps-available/$1'
 
