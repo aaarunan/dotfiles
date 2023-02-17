@@ -70,6 +70,7 @@ SOLARIZED_THEME="dark"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=( 
     zsh-autosuggestions
+    command-not-found
 )
 
 source $ZSH/oh-my-zsh.sh
