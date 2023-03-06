@@ -1,0 +1,58 @@
+set scrolloff=5
+
+set incsearch;
+set visualbell;
+set tm=500;
+set NERDTree;
+
+map Q gq
+"set clipboard+=unnamed
+"set clipboard+=ideaput
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+"pane resize"
+nnoremap <c-h> :action StretchSplitToLeft<CR>
+nnoremap <c-l> :action StretchSplitToRight<CR>
+nnoremap <c-j> :action StretchSplitToUp<CR>
+nnoremap <c-k> :action StretchSplitToDown<CR>
+
+
+sethandler <A-h> a:vim
+sethandler <A-j> a:vim
+sethandler <A-k> a:vim
+sethandler <A-l> a:vim
+sethandler <c-n> a:vim
+nnoremap <C-n> :NERDTreeToggle<CR>
+
+"pane split"
+nnoremap <c-b>" :action SplitHorizontally<CR>
+nnoremap <c-b>% :action SplitVertically<CR>
+
+"pane movement"
+nnoremap <A-h> <c-w>h
+nnoremap <A-l> <c-w>l
+nnoremap <A-j> <c-w>j
+nnoremap <A-k> <c-w>k
+nnoremap <c-O> :action MoveEditorToOppositeTabGroup<CR>
+
+nnoremap <TAB> :action PreviousTab<CR>
+nnoremap <s-TAB> :action NextTab<CR>
+
+"Code movement"
+nnoremap gc :action GotoClass<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotToDeclaration<CR>
+nnoremap gp :action GotToSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+nnoremap gb :action Back<CR>
+nnoremap gf :action Forward<CR>
+
+nnoremap <c-r> :action ContextRun<CR>
+nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+
+
+
+nnoremap [[ :action MethodDown<CR>
+nnoremap ]] :action MethodUp<CR>
+
