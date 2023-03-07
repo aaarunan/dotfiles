@@ -1,9 +1,9 @@
 set scrolloff=5
 
+set NERDTree;
 set incsearch;
 set visualbell;
 set tm=500;
-set NERDTree;
 
 map Q gq
 "set clipboard+=unnamed
