@@ -9,4 +9,6 @@ git clone https://git.sthu.org/repos/mutt-gruvbox.git ~/.mutt/gruvbox
 vim +PluginInstall +qall
 git config --global core.editor "vim"
 
+sudo apt-get install dconf-cli uuid-runtime
+bash -c "$(wget -qO- https://git.io/vQgMr)"
 

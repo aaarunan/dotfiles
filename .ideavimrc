@@ -36,8 +36,8 @@ nnoremap <A-j> <c-w>j
 nnoremap <A-k> <c-w>k
 nnoremap <c-O> :action MoveEditorToOppositeTabGroup<CR>
 
-nnoremap <TAB> :action PreviousTab<CR>
-nnoremap <s-TAB> :action NextTab<CR>
+nnoremap <TAB> :action NextTab<CR>
+nnoremap <s-TAB> :action PreviousTab<CR>
 
 "Code movement"
 nnoremap gc :action GotoClass<CR>
