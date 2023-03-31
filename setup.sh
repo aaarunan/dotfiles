@@ -6,5 +6,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://git.sthu.org/repos/mutt-gruvbox.git ~/.mutt/gruvbox
+vim +PluginInstall +qall
+git config --global core.editor "vim"
 
+sudo apt-get install dconf-cli uuid-runtime
+bash -c "$(wget -qO- https://git.io/vQgMr)"
 

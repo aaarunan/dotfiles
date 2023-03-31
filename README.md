@@ -1,10 +1,18 @@
 # dotfiles
 
 ## Installation
-```git clone --bare git@github.com:aaarunan/dotfiles.git $HOME/.dotfiles```
+```shell
+git clone --bare git@github.com:aaarunan/dotfiles.git $HOME/.dotfiles
+```
 
-```alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'```
+```shell
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+```
 
-```dotfiles checkout```
+```shell
+dotfiles checkout
+```
 
-```dotfiles config --local status.showUntrackedFiles no```
+```shell
+dotfiles config --local status.showUntrackedFiles no
+```
