@@ -162,4 +162,4 @@ macro index A \
     "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" \
     "mark all new as read"
 
-source ~/.mutt/gruvbox/colors-gruvbox-shuber.muttrc
+source ~/.mutt/gruvbox/colors-gruvbox-shuber.muttrc  
