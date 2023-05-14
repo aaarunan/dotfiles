@@ -17,3 +17,8 @@ alias etc-uwsgi='cd /etc/uwsgi/apps-available/$1'
 
 alias github-clone='git clone git@github.com:aaarunan/$1'
 alias gitea-clone='git clone git@gitea.samfundet.no:ITK/$1'
+
+detach() {
+        $1 $2 </dev/null &>/dev/null &; disown;
+}
+
