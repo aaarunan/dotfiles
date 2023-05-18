@@ -1,0 +1,20 @@
+[init]
+        defaultBranch = main
+[user]
+        name = Arunan Gnanasekaran
+        email = arunan2212@gmail.com    
+[pull]
+        ff = false
+        rebase = true
+[rebase]
+        autoStash = true
+[alias]
+        publish = !git pull && git push
+[filter "lfs"]
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+[push]
+        default = current
+        autoSetupRemote = true
