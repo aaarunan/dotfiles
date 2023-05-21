@@ -15,10 +15,17 @@ alias reload-bind='sudo systemctl reload bind9.service'
 alias etc-apache='cd /etc/apache2/sites-available/$1'
 alias etc-uwsgi='cd /etc/uwsgi/apps-available/$1'
 
-alias github-clone='git clone git@github.com:aaarunan/$1'
-alias gitea-clone='git clone git@gitea.samfundet.no:ITK/$1'
+alias clip='xclip -sel clip'
 
+giteaClone() {
+    "git clone gitea@gitea.samfundet.no:ITK/$1.git"
+}
+
+githubClone() {
+    git clone git@github.com:aaarunan/$1.git
+}
 detach() {
         $1 $2 </dev/null &>/dev/null &; disown;
 }
+
 
