@@ -9,6 +9,8 @@ done
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+alias venv='source venv/bin/activate'
+
 alias reload-apache='sudo systemctl reload apache2.service'
 alias reload-bind='sudo systemctl reload bind9.service'
 
@@ -16,6 +18,8 @@ alias etc-apache='cd /etc/apache2/sites-available/$1'
 alias etc-uwsgi='cd /etc/uwsgi/apps-available/$1'
 
 alias clip='xclip -sel clip'
+
+alias pycharm=pycharm-professional
 
 giteaClone() {
     "git clone gitea@gitea.samfundet.no:ITK/$1.git"
