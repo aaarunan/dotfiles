@@ -71,6 +71,7 @@ SOLARIZED_THEME="dark"
 plugins=( 
     zsh-autosuggestions
     command-not-found
+    vi-mode
     sudo
 )
 
