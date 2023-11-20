@@ -14,17 +14,22 @@ set wrapscan
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'w0rp/ale'
 Plugin 'ycm-core/youcompleteme'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'morhetz/gruvbox'
+Bundle 'edkolev/tmuxline.vim'
 
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 let g:airline_theme='gruvbox'
+let g:tmuxline_theme='gruvbox'
+let g:tmuxline_powerline_separators = 0
+
 set bg=dark
 colorscheme gruvbox
 
