@@ -28,8 +28,6 @@ filetype plugin indent on    " required
 
 let g:airline_theme='gruvbox'
 let g:tmuxline_theme='gruvbox'
-let g:tmuxline_powerline_separators = 0
-
 set bg=dark
 colorscheme gruvbox
 
